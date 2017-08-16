@@ -55,3 +55,27 @@ var info = document.querySelectorAll("span.bio-info-value");
 for(i=0; i<info.length; i++){
   info[i].innerText = "";
 }
+-------------------------------------------------------------
+#1
+var Pikachu = document.querySelectorAll("img");
+var duplicatPikachu = Pikachu[2]
+var NewPikachu = duplicatPikachu.cloneNode(true);
+var cont = document.querySelector("div.portfolio-container");
+cont.appendChild(NewPikachu);
+#2
+var container = document.querySelector(".portfolio-vid-description");
+var pikachu = document.querySelector("img[title=Pikachu]");
+for(i=0; i<10; i++){var tenPikachu = pikachu.cloneNode(true); container.appendChild(tenPikachu);}
+#3
+var ul = document.querySelector('.bio-info');
+var list = document.createElement('li');
+ul.appendChild(list);
+var span = document.createElement('span');
+span.innerText = "Page last Updated on";
+list.appendChild(span);
+var spanDate = document.createElement('span');
+spanDate.innerText = new Date().toLocaleString();
+list.appendChild(spanDate);
+#put class name into span tag
+span.className = "bio-info-title"
+spanDate.className = "bio-info-value.bio-info-date"
